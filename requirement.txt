@@ -1,4 +1,0 @@
-streamlit_option_menu
-streamlit
-numpy
-pickel

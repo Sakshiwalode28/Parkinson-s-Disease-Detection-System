@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-import win32api
+# import win32api
 
 
 
@@ -64,8 +64,8 @@ if (selected == "About"):
 
 
 
-width = win32api.GetSystemMetrics(0)
-
+# width = win32api.GetSystemMetrics(0)
+width = 1000
 if (selected == "Parkinsons Test"):
     
     # page title

@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-# import win32api
+import pyautogui
 
 
 
@@ -64,8 +64,7 @@ if (selected == "About"):
 
 
 
-# width = win32api.GetSystemMetrics(0)
-width = 1000
+screen_size = pyautogui.size()
 if (selected == "Parkinsons Test"):
     
     # page title
@@ -73,7 +72,7 @@ if (selected == "Parkinsons Test"):
     col1, col2,col3, col4 = st.columns(4)  
   
     
-    if(width <= 768 ):
+    if(screen_size.width <= 768  ):
         fo = st.text_input('MDVP: Fo(Hz)')
         
         fhi = st.text_input('MDVP: Fhi(Hz)')

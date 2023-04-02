@@ -71,7 +71,7 @@ if (selected == "Parkinsons Test"):
     st.title("Parkinson's Disease Detection Test")
     col1, col2,col3, col4 = st.columns(4)  
   
-    i = 1000
+    i = 0
 #     if(screenWidth <= 768  ):
     if(i <= 768  ):
         fo = st.text_input('MDVP: Fo(Hz)')

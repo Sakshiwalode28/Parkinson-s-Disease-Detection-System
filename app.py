@@ -5,7 +5,6 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 import win32api
 
-width = win32api.GetSystemMetrics(0)
 
 
 # loading the saved models
@@ -22,6 +21,8 @@ with st.sidebar:
                           ['About', 'Parkinsons Test'],
                           icons=['person','pen',],
                           default_index=0)
+    
+    
     
 
 # Parkinson's Prediction 
@@ -62,6 +63,8 @@ if (selected == "About"):
 
 
 
+
+width = win32api.GetSystemMetrics(0)
 
 if (selected == "Parkinsons Test"):
     

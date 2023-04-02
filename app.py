@@ -3,7 +3,9 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-import tkinter as tk
+import win32api
+
+width = win32api.GetSystemMetrics(0)
 
 
 # loading the saved models
@@ -58,10 +60,7 @@ if (selected == "About"):
 
 
 
- 
-root = tk.Tk()
 
-width = root.winfo_screenwidth()
 
 
 if (selected == "Parkinsons Test"):

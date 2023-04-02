@@ -1,7 +1,3 @@
-pickel
-numpy
-pandas
-streamlit
 streamlit-option-menu
 
 

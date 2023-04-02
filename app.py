@@ -3,6 +3,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
+import tkinter as tk
 
 
 # loading the saved models
@@ -55,60 +56,124 @@ if (selected == "About"):
     st.write("Some research has shown that regular aerobic exercise might reduce the risk of Parkinson's disease")
     st.write("Some other research has shown that people who consume caffeine — which is found in coffee, tea and cola — get Parkinson's disease less often than those who don't drink it. Green tea is also related to a reduced risk of developing Parkinson's disease. However, it is still not known whether caffeine protects against getting Parkinson's or is related in some other way. Currently there is not enough evidence to suggest that drinking caffeinated beverages protects against Parkinson's.")
     
+
+root = tk.Tk()
+
+width = root.winfo_screenwidth()
+
 if (selected == "Parkinsons Test"):
     
     # page title
     st.title("Parkinson's Disease Detection Test")
-
-    
+    st.write(width)
     col1, col2, col3, col4, col5 = st.columns(5)  
     
-    with col1:
+    if(width <= 650 ):
+     with col1:
         fo = st.text_input('MDVP: Fo(Hz)')
         
-    with col2:
-        fhi = st.text_input('MDVP: Fhi(Hz)')
-        
-    with col3:
-        flo = st.text_input('MDVP: Flo(Hz)')
-        
-    with col4:
-        Jitter_percent = st.text_input('MDVP: Jitter(%)')
-        
-    with col5:
-        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
-        
-    with col1:
-        RAP = st.text_input('MDVP: RAP')
-        
-    with col2:
+     with col1:
+        RAP = st.text_input('MDVP: RAP')   
+
+     with col1:
+        APQ3 = st.text_input('Shimmer: APQ3') 
+
+     with col1:
+        HNR = st.text_input('HNR')
+
+    
+    
+     with col2:
+        fhi = st.text_input('MDVP: Fhi(Hz)')  
+   
+     
+
+     with col2:
         PPQ = st.text_input('MDVP: PPQ')
-        
-    with col3:
-        DDP = st.text_input('Jitter: DDP')
-        
-    with col4:
-        Shimmer = st.text_input('MDVP: Shimmer')
-        
-    with col5:
-        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
-        
-    with col1:
-        APQ3 = st.text_input('Shimmer: APQ3')
-        
-    with col2:
+
+     with col2:
         APQ5 = st.text_input('Shimmer: APQ5')
         
-    with col3:
+   
+
+     with col3:
+        flo = st.text_input('MDVP: Flo(Hz)')
+
+     with col3:
+        DDP = st.text_input('Jitter: DDP')
+
+     with col3:
         APQ = st.text_input('MDVP: APQ')
+     with col4:
+        Jitter_percent = st.text_input('MDVP: Jitter(%)')
         
-    with col4:
+     with col4:
+        Shimmer = st.text_input('MDVP: Shimmer')
+
+     with col4:
         DDA = st.text_input('Shimmer: DDA')
+
+     with col5:
+        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
+
         
-    with col5:
+     with col5:
+        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
+ 
+     with col5:
         NHR = st.text_input('NHR')
         
-    with col1:
+     
+
+    
+    else:
+
+     with col1:
+        fo = st.text_input('MDVP: Fo(Hz)')
+        
+     with col2:
+        fhi = st.text_input('MDVP: Fhi(Hz)')
+        
+     with col3:
+        flo = st.text_input('MDVP: Flo(Hz)')
+        
+     with col4:
+        Jitter_percent = st.text_input('MDVP: Jitter(%)')
+        
+     with col5:
+        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
+        
+     with col1:
+        RAP = st.text_input('MDVP: RAP')
+        
+     with col2:
+        PPQ = st.text_input('MDVP: PPQ')
+        
+     with col3:
+        DDP = st.text_input('Jitter: DDP')
+        
+     with col4:
+        Shimmer = st.text_input('MDVP: Shimmer')
+        
+     with col5:
+        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
+        
+     with col1:
+        APQ3 = st.text_input('Shimmer: APQ3')
+        
+     with col2:
+        APQ5 = st.text_input('Shimmer: APQ5')
+        
+     with col3:
+        APQ = st.text_input('MDVP: APQ')
+        
+     with col4:
+        DDA = st.text_input('Shimmer: DDA')
+        
+     with col5:
+        NHR = st.text_input('NHR')
+        
+     with col1:
         HNR = st.text_input('HNR')
         
 #     with col2:

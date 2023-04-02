@@ -7,7 +7,7 @@ from PIL import Image
 
 # loading the saved models
 
-parkinsons_model = pickle.load(open("parkinsons_model.sav", 'rb'))
+parkinsons_model = pickle.load(open("parkinsons_detection_model.sav", 'rb'))
 
 
 

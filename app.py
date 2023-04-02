@@ -111,23 +111,23 @@ if (selected == "Parkinsons Test"):
     with col1:
         HNR = st.text_input('HNR')
         
-    # with col2:
-    #     RPDE = st.text_input('RPDE')
+    with col2:
+        RPDE = st.text_input('RPDE')
         
-    # with col3:
-    #     DFA = st.text_input('DFA')
+    with col3:
+        DFA = st.text_input('DFA')
         
-    # with col4:
-    #     spread1 = st.text_input('spread1')
+    with col4:
+        spread1 = st.text_input('spread1')
         
-    # with col5:
-    #     spread2 = st.text_input('spread2')
+    with col5:
+        spread2 = st.text_input('spread2')
         
-    # with col1:
-    #     D2 = st.text_input('D2')
+    with col1:
+        D2 = st.text_input('D2')
         
-    # with col2:
-    #     PPE = st.text_input('PPE')
+    with col2:
+        PPE = st.text_input('PPE')
 
 
 
@@ -141,16 +141,16 @@ if (selected == "Parkinsons Test"):
     st.write("  ")   
     if st.button("Take a Test"):
    
-        # if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' or RPDE == '' or DFA == '' or spread1 == '' or spread2 == '' or D2 == ''  or PPE == '' ):
-        #  st.error("Please enter all values correctly!!")
-        if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' ):
+        if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' or RPDE == '' or DFA == '' or spread1 == '' or spread2 == '' or D2 == ''  or PPE == '' ):
          st.error("Please enter all values correctly!!")
+#         if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' ):
+#          st.error("Please enter all values correctly!!")
 
 
         else: 
           
-        #   parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])
-          parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR]])                          
+          parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])
+#           parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR]])                          
            
           if (parkinsons_prediction[0] == 1):
             parkinsons_diagnosis = "The person has Parkinson's disease"

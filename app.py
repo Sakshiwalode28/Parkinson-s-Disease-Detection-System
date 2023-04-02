@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-import tkinter as tk
+#import tkinter as tk
 
 
 # loading the saved models
@@ -57,15 +57,12 @@ if (selected == "About"):
     st.write("Some other research has shown that people who consume caffeine — which is found in coffee, tea and cola — get Parkinson's disease less often than those who don't drink it. Green tea is also related to a reduced risk of developing Parkinson's disease. However, it is still not known whether caffeine protects against getting Parkinson's or is related in some other way. Currently there is not enough evidence to suggest that drinking caffeinated beverages protects against Parkinson's.")
     
 
-root = tk.Tk()
 
-width = root.winfo_screenwidth()
-
+width = 640
 if (selected == "Parkinsons Test"):
     
     # page title
     st.title("Parkinson's Disease Detection Test")
-    st.write(width)
     col1, col2, col3, col4, col5 = st.columns(5)  
     
     if(width <= 650 ):

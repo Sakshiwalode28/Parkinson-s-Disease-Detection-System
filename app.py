@@ -70,7 +70,7 @@ if (selected == "Parkinsons Test"):
     
     # page title
     st.title("Parkinson's Disease Detection Test")
-    col1, col2 = st.columns(2)  
+    col1, col2,col3, col4 = st.columns(4)  
   
     
     if(width <= 768 ):
@@ -115,10 +115,10 @@ if (selected == "Parkinsons Test"):
      with col2:
         fhi = st.text_input('MDVP: Fhi(Hz)')
         
-     with col1:
+     with col3:
         flo = st.text_input('MDVP: Flo(Hz)')
         
-     with col2:
+     with col4:
         Jitter_percent = st.text_input('MDVP: Jitter(%)')
         
      with col1:
@@ -127,10 +127,10 @@ if (selected == "Parkinsons Test"):
      with col2:
         RAP = st.text_input('MDVP: RAP')
         
-     with col1:
+     with col3:
         PPQ = st.text_input('MDVP: PPQ')
         
-     with col2:
+     with col4:
         DDP = st.text_input('Jitter: DDP')
         
      with col1:
@@ -139,10 +139,10 @@ if (selected == "Parkinsons Test"):
      with col2:
         Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
         
-     with col1:
+     with col3:
         APQ3 = st.text_input('Shimmer: APQ3')
         
-     with col2:
+     with col4:
         APQ5 = st.text_input('Shimmer: APQ5')
         
      with col1:
@@ -151,10 +151,10 @@ if (selected == "Parkinsons Test"):
      with col2:
         DDA = st.text_input('Shimmer: DDA')
         
-     with col1:
+     with col3:
         NHR = st.text_input('NHR')
         
-     with col2:
+     with col4:
         HNR = st.text_input('HNR')
         
     

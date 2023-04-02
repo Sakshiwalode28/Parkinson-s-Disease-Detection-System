@@ -38,7 +38,7 @@ if (selected == "About"):
     img = Image.open("parkinsons-disease-symptoms-infographic-1200x628.webp")
     
     st.write("Parkinson's disease signs and symptoms can be different for everyone. Early signs may be mild and go unnoticed. Symptoms often begin on one side of the body and usually remain worse on that side, even after symptoms begin to affect the limbs on both sides")
-    st.image(img , width= 700)
+    st.image(img)
     
     st.write("Tremor. A tremor, or rhythmic shaking, usually begins in a limb, often your hand or fingers. You may rub your thumb and forefinger back and forth. This is known as a pill-rolling tremor. Your hand may tremble when it's at rest. The shaking may decrease when you are performing tasks.")
     st.write("Slowed movement (bradykinesia). Over time, Parkinson's disease may slow your movement, making simple tasks difficult and time-consuming. Your steps may become shorter when you walk. It may be difficult to get out of a chair. You may drag or shuffle your feet as you try to walk.")

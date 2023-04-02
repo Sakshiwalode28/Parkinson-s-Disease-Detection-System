@@ -65,12 +65,12 @@ if (selected == "About"):
 
 
 # width = win32api.GetSystemMetrics(0)
-width = 10
+width = 1000
 if (selected == "Parkinsons Test"):
     
     # page title
     st.title("Parkinson's Disease Detection Test")
-    col1, col2, col3, col4, col5 = st.columns(5)  
+    col1, col2 = st.columns(2)  
   
     
     if(width <= 768 ):
@@ -108,54 +108,54 @@ if (selected == "Parkinsons Test"):
      
 
     
-#     else:
-#      with col1:
-#         fo = st.text_input('MDVP: Fo(Hz)')
+    else:
+     with col1:
+        fo = st.text_input('MDVP: Fo(Hz)')
         
-#      with col2:
-#         fhi = st.text_input('MDVP: Fhi(Hz)')
+     with col2:
+        fhi = st.text_input('MDVP: Fhi(Hz)')
         
-#      with col3:
-#         flo = st.text_input('MDVP: Flo(Hz)')
+     with col1:
+        flo = st.text_input('MDVP: Flo(Hz)')
         
-#      with col4:
-#         Jitter_percent = st.text_input('MDVP: Jitter(%)')
+     with col2:
+        Jitter_percent = st.text_input('MDVP: Jitter(%)')
         
-#      with col5:
-#         Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
+     with col1:
+        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
         
-#      with col1:
-#         RAP = st.text_input('MDVP: RAP')
+     with col2:
+        RAP = st.text_input('MDVP: RAP')
         
-#      with col2:
-#         PPQ = st.text_input('MDVP: PPQ')
+     with col1:
+        PPQ = st.text_input('MDVP: PPQ')
         
-#      with col3:
-#         DDP = st.text_input('Jitter: DDP')
+     with col2:
+        DDP = st.text_input('Jitter: DDP')
         
-#      with col4:
-#         Shimmer = st.text_input('MDVP: Shimmer')
+     with col1:
+        Shimmer = st.text_input('MDVP: Shimmer')
         
-#      with col5:
-#         Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
+     with col2:
+        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
         
-#      with col1:
-#         APQ3 = st.text_input('Shimmer: APQ3')
+     with col1:
+        APQ3 = st.text_input('Shimmer: APQ3')
         
-#      with col2:
-#         APQ5 = st.text_input('Shimmer: APQ5')
+     with col2:
+        APQ5 = st.text_input('Shimmer: APQ5')
         
-#      with col3:
-#         APQ = st.text_input('MDVP: APQ')
+     with col1:
+        APQ = st.text_input('MDVP: APQ')
         
-#      with col4:
-#         DDA = st.text_input('Shimmer: DDA')
+     with col2:
+        DDA = st.text_input('Shimmer: DDA')
         
-#      with col5:
-#         NHR = st.text_input('NHR')
+     with col1:
+        NHR = st.text_input('NHR')
         
-#      with col1:
-#         HNR = st.text_input('HNR')
+     with col2:
+        HNR = st.text_input('HNR')
         
     
 

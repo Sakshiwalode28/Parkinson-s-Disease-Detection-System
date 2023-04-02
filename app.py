@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-# import tkinter as tk
+import tkinter as tk
 
 
 # loading the saved models
@@ -59,11 +59,10 @@ if (selected == "About"):
 
 
  
-# root = tk.Tk()
+root = tk.Tk()
 
-# width = root.winfo_screenwidth()
-width = 640
-# height_px = root.winfo_screenheight()
+width = root.winfo_screenwidth()
+
 
 if (selected == "Parkinsons Test"):
     
@@ -72,7 +71,7 @@ if (selected == "Parkinsons Test"):
     col1, col2, col3, col4, col5 = st.columns(5)  
   
     
-    if(width <= 650 ):
+    if(width <= 768 ):
         fo = st.text_input('MDVP: Fo(Hz)')
         
         fhi = st.text_input('MDVP: Fhi(Hz)')

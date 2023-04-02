@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-#import tkinter as tk
+# import tkinter as tk
 
 
 # loading the saved models
@@ -39,7 +39,7 @@ if (selected == "About"):
     img = Image.open("parkinsons-disease-symptoms-infographic-1200x628.webp")
     
     st.write("Parkinson's disease signs and symptoms can be different for everyone. Early signs may be mild and go unnoticed. Symptoms often begin on one side of the body and usually remain worse on that side, even after symptoms begin to affect the limbs on both sides")
-    st.image(img)
+    st.image(img )
     
     st.write("Tremor. A tremor, or rhythmic shaking, usually begins in a limb, often your hand or fingers. You may rub your thumb and forefinger back and forth. This is known as a pill-rolling tremor. Your hand may tremble when it's at rest. The shaking may decrease when you are performing tasks.")
     st.write("Slowed movement (bradykinesia). Over time, Parkinson's disease may slow your movement, making simple tasks difficult and time-consuming. Your steps may become shorter when you walk. It may be difficult to get out of a chair. You may drag or shuffle your feet as you try to walk.")
@@ -55,147 +55,110 @@ if (selected == "About"):
     st.image(img1 , width= 300)
     st.write("Some research has shown that regular aerobic exercise might reduce the risk of Parkinson's disease")
     st.write("Some other research has shown that people who consume caffeine — which is found in coffee, tea and cola — get Parkinson's disease less often than those who don't drink it. Green tea is also related to a reduced risk of developing Parkinson's disease. However, it is still not known whether caffeine protects against getting Parkinson's or is related in some other way. Currently there is not enough evidence to suggest that drinking caffeinated beverages protects against Parkinson's.")
-    
 
 
+
+ 
+# root = tk.Tk()
+
+# width = root.winfo_screenwidth()
 width = 640
+# height_px = root.winfo_screenheight()
+
 if (selected == "Parkinsons Test"):
     
     # page title
     st.title("Parkinson's Disease Detection Test")
     col1, col2, col3, col4, col5 = st.columns(5)  
+  
     
     if(width <= 650 ):
+        fo = st.text_input('MDVP: Fo(Hz)')
+        
+        fhi = st.text_input('MDVP: Fhi(Hz)')
+        
+        flo = st.text_input('MDVP: Flo(Hz)')
+        
+        Jitter_percent = st.text_input('MDVP: Jitter(%)')
+        
+        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
+        
+        RAP = st.text_input('MDVP: RAP')
+        
+        PPQ = st.text_input('MDVP: PPQ')
+        
+        DDP = st.text_input('Jitter: DDP')
+        
+        Shimmer = st.text_input('MDVP: Shimmer')
+        
+        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
+        
+        APQ3 = st.text_input('Shimmer: APQ3')
+        
+        APQ5 = st.text_input('Shimmer: APQ5')
+        
+        APQ = st.text_input('MDVP: APQ')
+        
+        DDA = st.text_input('Shimmer: DDA')
+        
+        NHR = st.text_input('NHR')
+
+        HNR = st.text_input('HNR')
+     
+
+    
+    else:
      with col1:
         fo = st.text_input('MDVP: Fo(Hz)')
         
-     with col1:
-        RAP = st.text_input('MDVP: RAP')   
-
-     with col1:
-        APQ3 = st.text_input('Shimmer: APQ3') 
-
-     with col1:
-        HNR = st.text_input('HNR')
-
-    
-    
      with col2:
-        fhi = st.text_input('MDVP: Fhi(Hz)')  
-   
-     
-
-     with col2:
-        PPQ = st.text_input('MDVP: PPQ')
-
-     with col2:
-        APQ5 = st.text_input('Shimmer: APQ5')
+        fhi = st.text_input('MDVP: Fhi(Hz)')
         
-   
-
      with col3:
         flo = st.text_input('MDVP: Flo(Hz)')
-
-     with col3:
-        DDP = st.text_input('Jitter: DDP')
-
-     with col3:
-        APQ = st.text_input('MDVP: APQ')
+        
      with col4:
         Jitter_percent = st.text_input('MDVP: Jitter(%)')
         
-     with col4:
-        Shimmer = st.text_input('MDVP: Shimmer')
-
-     with col4:
-        DDA = st.text_input('Shimmer: DDA')
-
      with col5:
         Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
-
+        
+     with col1:
+        RAP = st.text_input('MDVP: RAP')
+        
+     with col2:
+        PPQ = st.text_input('MDVP: PPQ')
+        
+     with col3:
+        DDP = st.text_input('Jitter: DDP')
+        
+     with col4:
+        Shimmer = st.text_input('MDVP: Shimmer')
         
      with col5:
         Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
- 
+        
+     with col1:
+        APQ3 = st.text_input('Shimmer: APQ3')
+        
+     with col2:
+        APQ5 = st.text_input('Shimmer: APQ5')
+        
+     with col3:
+        APQ = st.text_input('MDVP: APQ')
+        
+     with col4:
+        DDA = st.text_input('Shimmer: DDA')
+        
      with col5:
         NHR = st.text_input('NHR')
         
-     
-
-    
-#     else:
-
-#      with col1:
-#         fo = st.text_input('MDVP: Fo(Hz)')
+     with col1:
+        HNR = st.text_input('HNR')
         
-#      with col2:
-#         fhi = st.text_input('MDVP: Fhi(Hz)')
-        
-#      with col3:
-#         flo = st.text_input('MDVP: Flo(Hz)')
-        
-#      with col4:
-#         Jitter_percent = st.text_input('MDVP: Jitter(%)')
-        
-#      with col5:
-#         Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
-        
-#      with col1:
-#         RAP = st.text_input('MDVP: RAP')
-        
-#      with col2:
-#         PPQ = st.text_input('MDVP: PPQ')
-        
-#      with col3:
-#         DDP = st.text_input('Jitter: DDP')
-        
-#      with col4:
-#         Shimmer = st.text_input('MDVP: Shimmer')
-        
-#      with col5:
-#         Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
-        
-#      with col1:
-#         APQ3 = st.text_input('Shimmer: APQ3')
-        
-#      with col2:
-#         APQ5 = st.text_input('Shimmer: APQ5')
-        
-#      with col3:
-#         APQ = st.text_input('MDVP: APQ')
-        
-#      with col4:
-#         DDA = st.text_input('Shimmer: DDA')
-        
-#      with col5:
-#         NHR = st.text_input('NHR')
-        
-#      with col1:
-#         HNR = st.text_input('HNR')
-        
-#     with col2:
-#         RPDE = st.text_input('RPDE')
-        
-#     with col3:
-#         DFA = st.text_input('DFA')
-        
-#     with col4:
-#         spread1 = st.text_input('spread1')
-        
-#     with col5:
-#         spread2 = st.text_input('spread2')
-        
-#     with col1:
-#         D2 = st.text_input('D2')
-        
-#     with col2:
-#         PPE = st.text_input('PPE')
-
-
-
     
 
-    
+   
     # code for Prediction
     parkinsons_diagnosis = ''
     
@@ -203,15 +166,15 @@ if (selected == "Parkinsons Test"):
     st.write("  ")   
     if st.button("Take a Test"):
    
-#         if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' or RPDE == '' or DFA == '' or spread1 == '' or spread2 == '' or D2 == ''  or PPE == '' ):
-#          st.error("Please enter all values correctly!!")
+        # if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' or RPDE == '' or DFA == '' or spread1 == '' or spread2 == '' or D2 == ''  or PPE == '' ):
+        #  st.error("Please enter all values correctly!!")
         if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' ):
          st.error("Please enter all values correctly!!")
 
 
         else: 
           
-#           parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])
+        #   parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])
           parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR]])                          
            
           if (parkinsons_prediction[0] == 1):

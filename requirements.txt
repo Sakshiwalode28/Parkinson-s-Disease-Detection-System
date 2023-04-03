@@ -1,4 +1,4 @@
-pillow
+
 pyautogui==0.9.53
 numpy==1.21.4
 pickle-mixin==1.0.2

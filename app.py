@@ -64,16 +64,16 @@ if (selected == "About"):
 
 
 import pyautogui 
-# screenWidth, screenHeight = pyautogui.size()
+screenWidth, screenHeight = pyautogui.size()
 if (selected == "Parkinsons Test"):
     
     # page title
     st.title("Parkinson's Disease Detection Test")
     col1, col2,col3, col4 = st.columns(4)  
   
-    i = 0
-#     if(screenWidth <= 768  ):
-    if(i <= 768  ):
+#     i = 0
+    if(screenWidth <= 768  ):
+#     if(i <= 768  ):
         fo = st.text_input('MDVP: Fo(Hz)')
         
         fhi = st.text_input('MDVP: Fhi(Hz)')

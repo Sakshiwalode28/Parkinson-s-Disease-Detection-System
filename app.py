@@ -63,7 +63,7 @@ if (selected == "About"):
 
 
 
-# import pyautogui 
+import pyautogui 
 # screenWidth, screenHeight = pyautogui.size()
 if (selected == "Parkinsons Test"):
     

@@ -1,11 +1,12 @@
 
+
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
+from streamlit.components.v1 import html
 
-
-
+# import pyautogui
 
 # loading the saved models
 
@@ -21,8 +22,6 @@ with st.sidebar:
                           ['About', 'Parkinsons Test'],
                           icons=['person','pen',],
                           default_index=0)
-    
-    
     
 
 # Parkinson's Prediction 
@@ -61,19 +60,15 @@ if (selected == "About"):
 
 
 
-
-
-# import pyautogui 
-# screenWidth, screenHeight = pyautogui.size()
+ 
+# screen_size = pyautogui.size()
 if (selected == "Parkinsons Test"):
-    
-    # page title
+   
     st.title("Parkinson's Disease Detection Test")
-    col1, col2,col3, col4 = st.columns(4)  
-  
+    col1, col2, col3, col4, col5 = st.columns(5)  
     i = 0
-#     if(screenWidth <= 768  ):
-    if(i <= 768  ):
+    if(i <= 768):
+   #  if(screen_size.width <= 768):
         fo = st.text_input('MDVP: Fo(Hz)')
         
         fhi = st.text_input('MDVP: Fhi(Hz)')
@@ -121,45 +116,48 @@ if (selected == "Parkinsons Test"):
      with col4:
         Jitter_percent = st.text_input('MDVP: Jitter(%)')
         
-     with col1:
+     with col5:
         Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
         
-     with col2:
+     with col1:
         RAP = st.text_input('MDVP: RAP')
         
-     with col3:
+     with col2:
         PPQ = st.text_input('MDVP: PPQ')
         
-     with col4:
+     with col3:
         DDP = st.text_input('Jitter: DDP')
         
-     with col1:
+     with col4:
         Shimmer = st.text_input('MDVP: Shimmer')
         
-     with col2:
+     with col5:
         Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
         
-     with col3:
+     with col1:
         APQ3 = st.text_input('Shimmer: APQ3')
         
-     with col4:
+     with col2:
         APQ5 = st.text_input('Shimmer: APQ5')
         
-     with col1:
+     with col3:
         APQ = st.text_input('MDVP: APQ')
         
-     with col2:
+     with col4:
         DDA = st.text_input('Shimmer: DDA')
         
-     with col3:
+     with col5:
         NHR = st.text_input('NHR')
         
-     with col4:
+     with col1:
         HNR = st.text_input('HNR')
         
     
 
-   
+
+    
+
+    
     # code for Prediction
     parkinsons_diagnosis = ''
     

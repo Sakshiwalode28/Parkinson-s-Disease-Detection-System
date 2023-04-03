@@ -64,7 +64,7 @@ if (selected == "About"):
 
 
 import pyautogui 
-screenWidth, screenHeight = pyautogui.size()
+# screenWidth, screenHeight = pyautogui.size()
 if (selected == "Parkinsons Test"):
     
     # page title

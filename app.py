@@ -69,13 +69,13 @@ if (selected == "Parkinsons Test"):
     i = 0
     if(i <= 768):
    #  if(screen_size.width <= 768):
-        fo = st.text_input('MDVP: Fo(Hz)')
+        fo = st.number_input('MDVP: Fo(Hz)', label_visibility="hidden")
         
-        fhi = st.text_input('MDVP: Fhi(Hz)')
+        fhi = st.number_input('MDVP: Fhi(Hz)', label_visibility="hidden")
         
-        flo = st.text_input('MDVP: Flo(Hz)')
+        flo = st.number_input('MDVP: Flo(Hz)', label_visibility="hidden")
         
-        Jitter_percent = st.text_input('MDVP: Jitter(%)', label_visibility="hidden")
+        Jitter_percent = st.number_input('MDVP: Jitter(%)', label_visibility="hidden")
 #         Jitter_percent = Jitter_percent/100
         
         

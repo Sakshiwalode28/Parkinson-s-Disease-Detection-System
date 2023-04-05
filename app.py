@@ -69,48 +69,48 @@ if (selected == "Parkinsons Test"):
     i = 0
     if(i <= 768):
    #  if(screen_size.width <= 768):
-        fo = st.number_input('MDVP: Fo(Hz)')
+        fo = st.text_input('MDVP: Fo(Hz)')
         
-        fhi = st.number_input('MDVP: Fhi(Hz)')
+        fhi = st.text_input('MDVP: Fhi(Hz)')
         
-        flo = st.number_input('MDVP: Flo(Hz)')
+        flo = st.text_input('MDVP: Flo(Hz)')
         
-        Jitter_percent = st.number_input('MDVP: Jitter(%)')
+        Jitter_percent = st.text_input('MDVP: Jitter(%)')
 #         Jitter_percent = Jitter_percent/100
         
         
-        Jitter_Abs = st.number_input('MDVP: Jitter(Abs)')
+        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
         
-        RAP = st.number_input('MDVP: RAP')
+        RAP = st.text_input('MDVP: RAP')
 #         RAP = RAP/100
         
         
-        PPQ = st.number_input('MDVP: PPQ')
+        PPQ = st.text_input('MDVP: PPQ')
 #         PPQ = PPQ/100
         
-        DDP = st.number_input('Jitter: DDP')
+        DDP = st.text_input('Jitter: DDP')
 #         DDP = DDP/100
         
-        Shimmer = st.number_input('MDVP: Shimmer')
+        Shimmer = st.text_input('MDVP: Shimmer')
 #         Shimmer = Shimmer/100
         
-        Shimmer_dB = st.number_input('MDVP: Shimmer(dB)')
+        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
         
-        APQ3 = st.number_input('Shimmer: APQ3')
+        APQ3 = st.text_input('Shimmer: APQ3')
 #         APQ3 = APQ3/100
         
-        APQ5 = st.number_input('Shimmer: APQ5')
+        APQ5 = st.text_input('Shimmer: APQ5')
 #         APQ5 = APQ5/100
         
-        APQ = st.number_input('MDVP: APQ11')
+        APQ = st.text_input('MDVP: APQ11')
 #         APQ = APQ/100
         
-        DDA = st.number_input('Shimmer: DDA')
+        DDA = st.text_input('Shimmer: DDA')
 #         DDA = DDA/100
         
-        NHR = st.number_input('NHR')
+        NHR = st.text_input('NHR')
 
-        HNR = st.number_input('HNR')
+        HNR = st.text_input('HNR')
      
 
     

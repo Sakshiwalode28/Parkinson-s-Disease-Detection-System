@@ -76,6 +76,9 @@ if (selected == "Parkinsons Test"):
         flo = st.text_input('MDVP: Flo(Hz)')
         
         Jitter_percent = st.text_input('MDVP: Jitter(%)')
+        Jitter_percent = int(Jitter_percent)
+        Jitter_percent = Jitter_percent/100
+        Jitter_percent = str(Jitter_percent)
         
         Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
         
@@ -182,7 +185,7 @@ if (selected == "Parkinsons Test"):
         else: 
           
         #   parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent/100, Jitter_Abs, RAP/100, PPQ/100,DDP/100,Shimmer/100,Shimmer_dB,APQ3/100,APQ5/100,APQ/100,DDA/100,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])
-          parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent/100, Jitter_Abs, RAP/100, PPQ/100,DDP/100,Shimmer/100,Shimmer_dB,APQ3/100,APQ5/100,APQ/100,DDA/100,NHR,HNR]])                          
+          parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR]])                          
            
           if (parkinsons_prediction[0] == 1):
             parkinsons_diagnosis = "The person has Parkinson's disease"

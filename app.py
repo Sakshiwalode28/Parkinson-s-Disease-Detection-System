@@ -76,42 +76,41 @@ if (selected == "Parkinsons Test"):
         flo = st.text_input('MDVP: Flo(Hz)')
         
         Jitter_percent = st.text_input('MDVP: Jitter(%)')
-#         Jitter_percent = int(Jitter_percent)
-#         Jitter_percent = Jitter_percent/100
-#         Jitter_percent = str(Jitter_percent)
+        Jitter_percent = Jitter_percent/100
         
-        Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
+        
+        Jitter_Abs = st.number_input('MDVP: Jitter(Abs)')
         
         RAP = st.number_input('MDVP: RAP')
+        RAP = RAP/100
         
         
+        PPQ = st.number_input('MDVP: PPQ')
+        PPQ = PPQ/100
         
-        PPQ = st.text_input('MDVP: PPQ')
-      
+        DDP = st.number_input('Jitter: DDP')
+        DDP = DDP/100
         
-        DDP = st.text_input('Jitter: DDP')
-     
+        Shimmer = st.number_input('MDVP: Shimmer')
+        Shimmer = Shimmer/100
         
-        Shimmer = st.text_input('MDVP: Shimmer')
+        Shimmer_dB = st.number_input('MDVP: Shimmer(dB)')
         
+        APQ3 = st.number_input('Shimmer: APQ3')
+        APQ3 = APQ3/100
         
-        Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
+        APQ5 = st.number_input('Shimmer: APQ5')
+        APQ5 = APQ5/100
         
-        APQ3 = st.text_input('Shimmer: APQ3')
-       
+        APQ = st.number_input('MDVP: APQ11')
+        APQ = APQ/100
         
-        APQ5 = st.text_input('Shimmer: APQ5')
+        DDA = st.number_input('Shimmer: DDA')
+        DDA = DDA/100
         
-        
-        APQ = st.text_input('MDVP: APQ11')
-        
-        
-        DDA = st.text_input('Shimmer: DDA')
-        
-        
-        NHR = st.text_input('NHR')
+        NHR = st.number_input('NHR')
 
-        HNR = st.text_input('HNR')
+        HNR = st.number_input('HNR')
      
 
     

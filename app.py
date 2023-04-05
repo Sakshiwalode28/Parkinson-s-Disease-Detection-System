@@ -82,8 +82,9 @@ if (selected == "Parkinsons Test"):
         
         Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
         
-        RAP = st.text_input('MDVP: RAP')
-       
+        RAP = st.number_input('MDVP: RAP')
+        
+        
         
         PPQ = st.text_input('MDVP: PPQ')
       

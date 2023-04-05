@@ -75,42 +75,42 @@ if (selected == "Parkinsons Test"):
         
         flo = st.text_input('MDVP: Flo(Hz)')
         
-        Jitter_percent = st.text_input('MDVP: Jitter(%)')
-        Jitter_percent = Jitter_percent/100
+        Jitter_percent = st.text_input('MDVP: Jitter(%)', label_visibility="hidden")
+#         Jitter_percent = Jitter_percent/100
         
         
-        Jitter_Abs = st.number_input('MDVP: Jitter(Abs)')
+        Jitter_Abs = st.number_input('MDVP: Jitter(Abs)', label_visibility="hidden")
         
-        RAP = st.number_input('MDVP: RAP')
-        RAP = RAP/100
+        RAP = st.number_input('MDVP: RAP', label_visibility="hidden")
+#         RAP = RAP/100
         
         
-        PPQ = st.number_input('MDVP: PPQ')
-        PPQ = PPQ/100
+        PPQ = st.number_input('MDVP: PPQ', label_visibility="hidden")
+#         PPQ = PPQ/100
         
-        DDP = st.number_input('Jitter: DDP')
-        DDP = DDP/100
+        DDP = st.number_input('Jitter: DDP', label_visibility="hidden")
+#         DDP = DDP/100
         
-        Shimmer = st.number_input('MDVP: Shimmer')
-        Shimmer = Shimmer/100
+        Shimmer = st.number_input('MDVP: Shimmer', label_visibility="hidden")
+#         Shimmer = Shimmer/100
         
-        Shimmer_dB = st.number_input('MDVP: Shimmer(dB)')
+        Shimmer_dB = st.number_input('MDVP: Shimmer(dB)', label_visibility="hidden")
         
-        APQ3 = st.number_input('Shimmer: APQ3')
-        APQ3 = APQ3/100
+        APQ3 = st.number_input('Shimmer: APQ3', label_visibility="hidden")
+#         APQ3 = APQ3/100
         
-        APQ5 = st.number_input('Shimmer: APQ5')
-        APQ5 = APQ5/100
+        APQ5 = st.number_input('Shimmer: APQ5', label_visibility="hidden")
+#         APQ5 = APQ5/100
         
-        APQ = st.number_input('MDVP: APQ11')
-        APQ = APQ/100
+        APQ = st.number_input('MDVP: APQ11', label_visibility="hidden")
+#         APQ = APQ/100
         
-        DDA = st.number_input('Shimmer: DDA')
-        DDA = DDA/100
+        DDA = st.number_input('Shimmer: DDA', label_visibility="hidden")
+#         DDA = DDA/100
         
-        NHR = st.number_input('NHR')
+        NHR = st.number_input('NHR', label_visibility="hidden")
 
-        HNR = st.number_input('HNR')
+        HNR = st.number_input('HNR', label_visibility="hidden")
      
 
     

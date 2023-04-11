@@ -7,3 +7,4 @@ scikit-learn==0.24.2
 protobuf==3.20.1
 matplotlib
 seaborn==0.9.0
+--upgrade scikit-learn

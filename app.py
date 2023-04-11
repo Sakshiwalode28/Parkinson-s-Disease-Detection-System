@@ -1,5 +1,6 @@
-
+# KNN ALGO
 import pickle
+import numpy as np
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
@@ -9,15 +10,13 @@ from streamlit.components.v1 import html
 
 # loading the saved models
 
-parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
-
+parkinsons_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))
+print(parkinsons_model)
 
 
 # sidebar for navigation
 with st.sidebar:
-    # st.title("Parkinson's Disease Detection using Machine Learning")
     selected = option_menu('Parkinsons Disease Detection',
-                          
                           ['About', 'Parkinsons Test'],
                           icons=['person','pen',],
                           default_index=0)
@@ -67,13 +66,13 @@ if (selected == "Parkinsons Test"):
    col1, col2, col3, col4, col5 = st.columns(5)  
    fo = st.text_input('MDVP: Fo(Hz)')
         
-   fhi = st.text_input('MDVP: Fhi(Hz)')
+   # fhi = st.text_input('MDVP: Fhi(Hz)')
         
-   flo = st.text_input('MDVP: Flo(Hz)')
+   # flo = st.text_input('MDVP: Flo(Hz)')
         
    Jitter_percent = st.text_input('MDVP: Jitter(%)')
         
-   Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
+   # Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
         
    RAPval = st.text_input('MDVP: RAP')
         
@@ -97,100 +96,35 @@ if (selected == "Parkinsons Test"):
 
    HNRval = st.text_input('HNR')
      
-
-    
-   #  else:
-   #   with col1:
-   #      fo = st.text_input('MDVP: Fo(Hz)')
-        
-   #   with col2:
-   #      fhi = st.text_input('MDVP: Fhi(Hz)')
-        
-   #   with col3:
-   #      flo = st.text_input('MDVP: Flo(Hz)')
-        
-   #   with col4:
-   #      Jitter_percent = st.text_input('MDVP: Jitter(%)')
-        
-   #   with col5:
-   #      Jitter_Abs = st.text_input('MDVP: Jitter(Abs)')
-        
-   #   with col1:
-   #      RAP = st.text_input('MDVP: RAP')
-        
-   #   with col2:
-   #      PPQ = st.text_input('MDVP: PPQ')
-        
-   #   with col3:
-   #      DDP = st.text_input('Jitter: DDP')
-        
-   #   with col4:
-   #      Shimmer = st.text_input('MDVP: Shimmer')
-        
-   #   with col5:
-   #      Shimmer_dB = st.text_input('MDVP: Shimmer(dB)')
-        
-   #   with col1:
-   #      APQ3 = st.text_input('Shimmer: APQ3')
-        
-   #   with col2:
-   #      APQ5 = st.text_input('Shimmer: APQ5')
-        
-   #   with col3:
-   #      APQ = st.text_input('MDVP: APQ')
-        
-   #   with col4:
-   #      DDA = st.text_input('Shimmer: DDA')
-        
-   #   with col5:
-   #      NHR = st.text_input('NHR')
-        
-   #   with col1:
-   #      HNR = st.text_input('HNR')
-        
-   #  # with col2:
-   #  #     RPDE = st.text_input('RPDE')
-        
-   #  # with col3:
-   #  #     DFA = st.text_input('DFA')
-        
-   #  # with col4:
-   #  #     spread1 = st.text_input('spread1')
-        
-   #  # with col5:
-   #  #     spread2 = st.text_input('spread2')
-        
-   #  # with col1:
-   #  #     D2 = st.text_input('D2')
-        
-   #  # with col2:
-   #  #     PPE = st.text_input('PPE')
-
-
-
+   print(type(DDAval))
     
 
     
    # code for Prediction
    parkinsons_diagnosis = ''
-    
+   
+   
    st.write("  ")   
    if st.button("Take a Test"):
    
-      # if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAP == '' or PPQ == '' or DDP == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3 == '' or APQ5 == '' or APQ == '' or DDA == '' or NHR == '' or HNR == '' or RPDE == '' or DFA == '' or spread1 == '' or spread2 == '' or D2 == ''  or PPE == '' ):
-      #  st.error("Please enter all values correctly!!")
-      if(fo == '' or fhi == '' or flo == '' or Jitter_percent == '' or Jitter_Abs == '' or RAPval== '' or PPQval == '' or DDPval == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3val == '' or APQ5val == '' or APQval == '' or DDAval == '' or NHRval == '' or HNRval == '' ):
+      
+      if(fo == '' or Jitter_percent == ''  or RAPval== '' or PPQval == '' or DDPval == '' or Shimmer == '' or  Shimmer_dB == '' or APQ3val == '' or APQ5val == '' or APQval == '' or DDAval == '' or NHRval == '' or HNRval == '' ):
          st.error("Please enter all values correctly!!")
 
-      else:    
-         # parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])
-         parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAPval, PPQval,DDPval,Shimmer,Shimmer_dB,APQ3val,APQ5val,APQval,DDAval,NHRval,HNRval]])                          
-         if (parkinsons_prediction[0] == 1):
+      else:  
+         ip =[fo,Jitter_percent, RAPval, PPQval,DDPval,Shimmer,Shimmer_dB,APQ3val,APQ5val,APQval,DDAval,NHRval,HNRval]
+         b = np.array(ip, dtype = float) #  convert using numpy
+         c = [float(i) for i in ip] #  convert with for loop
+         print("after: ", type(DDAval))
+         parkinsons_prediction = parkinsons_model.predict([c])                          
+         if (parkinsons_prediction == 1):
             parkinsons_diagnosis = "The person has Parkinson's disease"
             st.warning(parkinsons_diagnosis)
          else:
             parkinsons_diagnosis = "The person does not have Parkinson's disease"
             st.success(parkinsons_diagnosis)
+
+      
 
 
 

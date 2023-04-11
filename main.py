@@ -24,6 +24,7 @@ y =  dataset.status.values
 X = dataset.drop(['Name', 'status'], axis=1)
 
 from sklearn.neighbors import KNeighborsClassifier
+
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=21, stratify=y)

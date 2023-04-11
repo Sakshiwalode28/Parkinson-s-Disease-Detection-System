@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-dataset=pd.read_csv('Final dataset.csv')
+dataset=pd.read_csv('Final_dataset.csv')
 
 print(dataset.head())
 

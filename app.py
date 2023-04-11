@@ -96,7 +96,7 @@ if (selected == "Parkinsons Test"):
 
    HNRval = st.text_input('HNR')
      
-   print(type(DDAval))
+#    print(type(DDAval))
     
 
     
@@ -115,7 +115,7 @@ if (selected == "Parkinsons Test"):
          ip =[fo,Jitter_percent, RAPval, PPQval,DDPval,Shimmer,Shimmer_dB,APQ3val,APQ5val,APQval,DDAval,NHRval,HNRval]
          b = np.array(ip, dtype = float) #  convert using numpy
          c = [float(i) for i in ip] #  convert with for loop
-         print("after: ", type(DDAval))
+#          print("after: ", type(DDAval))
          parkinsons_prediction = parkinsons_model.predict([c])                          
          if (parkinsons_prediction == 1):
             parkinsons_diagnosis = "The person has Parkinson's disease"

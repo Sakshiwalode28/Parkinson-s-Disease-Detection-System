@@ -11,7 +11,7 @@ from streamlit.components.v1 import html
 # loading the saved models
 
 parkinsons_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))
-print(parkinsons_model)
+# print(parkinsons_model)
 
 
 # sidebar for navigation

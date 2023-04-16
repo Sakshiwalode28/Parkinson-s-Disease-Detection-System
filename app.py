@@ -17,12 +17,17 @@ parkinsons_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Parkinsons Disease Detection',
-                          ['About', 'Parkinsons Test'],
-                          icons=['person','pen',],
+                          ['About', 'Parkinsons Test', 'Accuracy'],
+                          icons=['person','pen','check2-circle'],
                           default_index=0)
     
 
 # Parkinson's Prediction 
+if (selected == "Accuracy"):
+    st.title("Accuracy ")
+    st.header(89.9%)
+    
+    
 if (selected == "About"):
 
    

@@ -10,7 +10,7 @@ from streamlit.components.v1 import html
 
 # loading the saved models
 
-parkinsons_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('parkinsons_detect_model.sav', 'rb'))
 # print(parkinsons_model)
 
 

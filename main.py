@@ -65,4 +65,4 @@ import pickle
 filename = 'parkinsons_detection_model.sav'
 pickle.dump(knn, open(filename , 'wb'))
 
-loaded_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))
+# loaded_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))

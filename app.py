@@ -17,16 +17,13 @@ parkinsons_model = pickle.load(open('parkinsons_detection_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Parkinsons Disease Detection',
-                          ['About', 'Parkinsons Test', 'Accuracy'],
+                          ['About', 'Parkinson's Test'],
                           icons=['person','pen','check2-circle'],
                           default_index=0)
     
 
 # Parkinson's Prediction 
-if (selected == "Accuracy"):
-    st.title("Accuracy ")
-    st.header("89.9%")
-    
+
     
 if (selected == "About"):
 
@@ -65,7 +62,7 @@ if (selected == "About"):
 
  
 # screen_size = pyautogui.size()
-if (selected == "Parkinsons Test"):
+if (selected == "Parkinson's Test"):
    
    st.title("Parkinson's Disease Detection Test")
    col1, col2, col3, col4, col5 = st.columns(5)  
